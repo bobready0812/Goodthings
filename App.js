@@ -27,6 +27,7 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import { useState } from 'react/cjs/react.production.min';
 
 const Section = ({children, title}): Node => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -60,6 +61,16 @@ const App: () => Node = () => {
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
+const [Quote, setQuote] = useState();
+const [Author, setAuthor] = useState();
+
+  const randomQuote = () => {
+    fetch("https://api.quotable.io/random").then(res => res.json()).then(result => {
+    console.log(result);
+    setQuote(result.content);
+    setAuthor(result.author);
+  })
+  }
 
   return (
     <View style={{flex:1, justifyContent:'center', alignItems:'center' , backgroundColor:"#5372F0"}}>
@@ -99,7 +110,7 @@ const App: () => Node = () => {
           color:'#000'
         }}> ---- Author Name</Text>
         <TouchableOpacity
-          onPress={() => {}}
+          onPress={randomQuote}
           style={{
             backgroundColor: '#5372F0',
             padding: 20,
