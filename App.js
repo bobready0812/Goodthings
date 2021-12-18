@@ -70,7 +70,7 @@ const App: () => Node = () => {
         borderRadius:20, 
         padding:20,}
         }>
-
+          <StatusBar barStyle="light-content" />
         <Text style={{
             textAlign:'center', 
             fontSize:26, 
@@ -86,8 +86,9 @@ const App: () => Node = () => {
           letterSpacing:1.1, 
           fontWeight:"400", 
           textAlign:'center', 
-          marginBottom:10}
-          }>
+          marginBottom:10,
+          paddingHorizontal:30,
+          }}>
           The first duty of love is to listen.
         </Text>
         <Text style={{
@@ -109,6 +110,35 @@ const App: () => Node = () => {
             NewQuote
           </Text>
         </TouchableOpacity>
+        <View style={{flexDirection:'row', justifyContent:'space-around'}}>
+          <TouchableOpacity 
+          onPress={() => {}} 
+          style={{
+            borderWidth:2, 
+            borderColor:'#5372F0',
+            borderRadius:50,
+            padding:15}}>
+          <Text>🔊</Text>
+          </TouchableOpacity>
+          <TouchableOpacity 
+          onPress={() => {}} 
+          style={{
+            borderWidth:2, 
+            borderColor:'#5372F0',
+            borderRadius:50,
+            padding:15}}>
+          <Text>🔊</Text>
+          </TouchableOpacity>
+          <TouchableOpacity 
+          onPress={() => {}} 
+          style={{
+            borderWidth:2, 
+            borderColor:'#5372F0',
+            borderRadius:50,
+            padding:15}}>
+          <Text>🔊</Text>
+          </TouchableOpacity>
+        </View>
       </View>
     </View>
   );
