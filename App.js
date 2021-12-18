@@ -1,3 +1,4 @@
+/* eslint-disable react/self-closing-comp */
 /**
  * Sample React Native App
  * https://github.com/facebook/react-native
@@ -14,6 +15,7 @@ import {
   StatusBar,
   StyleSheet,
   Text,
+  TouchableOpacity,
   useColorScheme,
   View,
 } from 'react-native';
@@ -60,10 +62,34 @@ const App: () => Node = () => {
   };
 
   return (
-    <View style={{flex:1}}>
-    <Text>안녕</Text>
-    <Text>크크</Text>
-    <Text>굳</Text>
+    <View style={{flex:1, justifyContent:'center', alignItems:'center' , backgroundColor:"#5372F0"}}>
+      <View style={
+        {
+        width:'90%', 
+        backgroundColor:"#fff",
+        borderRadius:20, 
+        padding:20,}
+        }>
+
+        <Text style={{
+            textAlign:'center', 
+            fontSize:26, 
+            fontWeight:'600',
+            color:'#333',
+            marginBottom:20}}>
+            Quote of the Day
+          </Text>
+          <Text style={
+          {color:'#000', 
+          fontSize:16, 
+          lineHeight:26,
+          letterSpacing:1.1, 
+          fontWeight:"400", 
+          textAlign:'center', 
+          marginBottom:10}
+          }>The first duty of love is to listen.</Text>
+          <TouchableOpacity
+      </View>
     </View>
   );
 };
@@ -72,7 +98,7 @@ const styles = StyleSheet.create({
   sectionContainer: {
     marginTop: 32,
     paddingHorizontal: 24,
-  },z
+  },
   sectionTitle: {
     fontSize: 24,
     fontWeight: '600',
