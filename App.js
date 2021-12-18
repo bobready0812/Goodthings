@@ -96,7 +96,7 @@ const App: () => Node = () => {
           fontStyle:'italic',
           fontSize:16,
           color:'#000'
-        }}
+        }}> ---- Author Name</Text>
         <TouchableOpacity
           onPress={() => {}}
           style={{
