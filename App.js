@@ -88,7 +88,14 @@ const App: () => Node = () => {
           textAlign:'center', 
           marginBottom:10}
           }>The first duty of love is to listen.</Text>
-          <TouchableOpacity
+          <TouchableOpacity style={
+            {backgroundColor:'#5372F0', 
+            padding:20, 
+            borderRadius:30,
+            marginVertical:20
+            }}>
+          <Text style={{color:'#fff', fontSize:18,textAlign:"center"}}>NewQuote</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
